@@ -585,7 +585,11 @@ footer {
   nav ul {
     display: none;
   }
-  #home, #skills, #projects, #clients, #contact {
+  #home,
+  #skills,
+  #projects,
+  #clients,
+  #contact {
     padding-top: 2rem;
   }
   nav,
@@ -644,7 +648,7 @@ footer {
   nav {
     width: 98%;
     margin: auto;
-  } 
+  }
   nav img {
     height: 50px;
   }
@@ -671,11 +675,11 @@ footer {
     justify-content: space-between;
   }
   .skills-sec .skill-card {
-    width: 160px;
-    min-width: 160px;
+    width: 150px;
+    min-width: 150px;
   }
   .skills-sec .skill-card .title {
-    font-size: 18px;
+    font-size: 16px;
   }
   .projects-sec .project-card,
   .clients-sec .client-card {
