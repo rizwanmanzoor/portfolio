@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Textarea } from "@/components/ui/Textarea";
-import { Send, CheckCircle, Loader2 } from "lucide-react";
+import { Send, CheckCircle, Loader2, BadgeAlert } from "lucide-react";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -215,7 +215,23 @@ export default function ContactForm() {
       </motion.div>
 
       {formMessage && (
-        <p className="text-red-500 text-sm mt-2 text-center">{formMessage}</p>
+        <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="text-center py-16"
+      >
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ type: "spring", delay: 0.2 }}
+          className="w-20 h-20 mx-auto mb-6 rounded-full bg-red-500/20 flex items-center justify-center"
+        >
+          <BadgeAlert className="w-10 h-10 text-red-500" />
+        </motion.div>
+        <h3 className="text-2xl text-red-500 font-heading">
+          {formMessage}
+        </h3>
+      </motion.div>
       )}
 
       <motion.p
