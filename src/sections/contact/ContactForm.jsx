@@ -15,19 +15,23 @@ export default function ContactForm() {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [formMessage, setFormMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
 
     try {
-      const response = await fetch("https://developersouls.com/api/portfolio-contact.php", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://developersouls.com/api/portfolio-contact.php",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
         },
-        body: JSON.stringify(formData),
-      });
+      );
 
       const data = await response.json();
 
@@ -44,15 +48,12 @@ export default function ContactForm() {
         message: "",
       });
     } catch (error) {
-      alert(
-        error.message || "Unable to submit the form. Please try again later."
+      setFormMessage(
+        error.message || "Unable to submit the form. Please try again later.",
       );
     } finally {
       setIsLoading(false);
     }
-
-    setIsLoading(false);
-    setIsSubmitted(true);
   };
 
   if (isSubmitted) {
@@ -212,6 +213,10 @@ export default function ContactForm() {
           )}
         </Button>
       </motion.div>
+
+      {formMessage && (
+        <p className="text-red-500 text-sm mt-2 text-center">{formMessage}</p>
+      )}
 
       <motion.p
         initial={{ opacity: 0 }}
