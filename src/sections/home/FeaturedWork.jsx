@@ -15,15 +15,6 @@ const featuredProjects = [
     url: "https://thebrandskingdom.com",
     image:
       "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800&q=80",
-    description: "Fashion e-commerce with performance-optimized storefront",
-  },
-  {
-    title: "RealREPP",
-    category: "SaaS & Platforms",
-    url: "https://realrepp.com",
-    image:
-      "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80",
-    description: "AI-powered recruitment platform interface",
   },
   {
     title: "LDM Management Ltd",
@@ -31,15 +22,20 @@ const featuredProjects = [
     url: "https://ldmmanagementltd.co.uk",
     image:
       "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
-    description: "UK property management portal redesign",
   },
   {
-    title: "Nishma Health Assist",
+    title: "MedOral RCM",
     category: "Healthcare",
-    url: "https://nishmahealthassist.com",
+    url: "https://medoralrcm.com",
     image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
-    description: "Healthcare platform with patient-centric design",
+      "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&q=80",
+  },
+  {
+    title: "Barota",
+    category: "Real Estate",
+    url: "http://barota.com/",
+    image:
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
   },
 ];
 
@@ -52,10 +48,11 @@ export default function FeaturedWork() {
           className="absolute inset-0"
           style={{
             backgroundImage: `linear-gradient(#3EE27A 1px, transparent 1px), linear-gradient(90deg, #3EE27A 1px, transparent 1px)`,
-            backgroundSize: "50px 50px",
+            backgroundSize: "60px 60px",
           }}
         />
       </div>
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-secondary/5 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         {/* Header */}
@@ -126,15 +123,17 @@ export default function FeaturedWork() {
 
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 px-4 py-6 bg-linear-to-t from-primary via-primary/50 to-transparent">
-                  <span className="text-accent text-md font-medium tracking-wide font-accent">
-                    {project.category}
-                  </span>
-                  <h3 className="text-3xl md:text-4xl text-white  mb-2 group-hover:text-accent transition-colors leading-tight font-heading">
+                  <h3 className="text-3xl md:text-4xl text-white mb-2 group-hover:text-accent transition-colors leading-tight font-accent">
                     {project.title}
                   </h3>
-                  <p className="text-gray-200 text-sm font-body">
-                    {project.description}
-                  </p>
+                  <motion.span
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                    className="inline-flex items-center w-fit px-3 py-1 font-accent rounded-full text-xs bg-accent/10 text-accent border border-accent/20 mb-3"
+                  >
+                    {project.category}
+                  </motion.span>
                 </div>
 
                 {/* Arrow indicator */}
