@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
-import { Menu, X, ArrowUpRight, Phone, Linkedin, Github, MessageCircle, Mail } from "lucide-react";
+import { Menu, X, ArrowUpRight, Phone, Linkedin, Github, Mail, Smartphone } from "lucide-react";
 
 const navLinks = [
   { name: "Home", page: "/" },
@@ -26,7 +26,7 @@ const socialLinks = [
     href: 'mailto:rizwanmanzoor200@gmail.com'
   },
   {
-    icon: MessageCircle,
+    icon: Smartphone,
     label: 'WhatsApp',
     href: 'https://wa.me/923454455148'
   }

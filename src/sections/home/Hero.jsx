@@ -141,10 +141,10 @@ export default function Hero() {
               {/* Decorative border */}
               <div className="absolute -inset-px bg-linear-to-br from-accent/50 via-transparent to-secondary/50 rounded-3xl" />
 
-              <div className="relative bg-primary rounded-3xl p-8 space-y-8">
+              <div className="relative bg-primary rounded-3xl px-4 py-8 md:px-8 space-y-8">
                 <div className="space-y-6">
                   {/* Floating badges */}
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex justify-center md:justify-start flex-wrap gap-3">
                     <motion.div
                       animate={{ y: [0, -5, 0] }}
                       transition={{ duration: 3, repeat: Infinity }}
@@ -162,7 +162,7 @@ export default function Hero() {
                     >
                       <Palette size={18} className="text-accent" />
                       <span className="font-sub-heading font-medium text-sm">
-                        UI/UX Design
+                        WordPress
                       </span>
                     </motion.div>
                     <motion.div
@@ -172,7 +172,7 @@ export default function Hero() {
                     >
                       <Globe size={18} className="text-accent" />
                       <span className="font-sub-heading font-medium text-sm">
-                        WordPress
+                        Figma to Code
                       </span>
                     </motion.div>
                     <motion.div
