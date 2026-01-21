@@ -1,10 +1,10 @@
 import { Route, Routes, useLocation } from "react-router-dom";
-import Test from "./sections/Test";
 import Home from "./pages/Home";
 import { useEffect, useState } from "react";
 import Layout from "./Layout";
 import Work from "./pages/Work";
 import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   const location = useLocation();
@@ -26,8 +26,8 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/work" element={<Work />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/test" element={<Test />} />
       </Route>
+      <Route path="*" element={<NotFound />} />
     </Routes>
   )
 }
