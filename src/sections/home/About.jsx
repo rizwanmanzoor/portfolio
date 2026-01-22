@@ -39,18 +39,18 @@ export default function About() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="absolute -right-6 bottom-12 bg-primary border border-white/10 rounded-2xl p-6 backdrop-blur-xl"
+                className="absolute -right-4 bottom-12 bg-primary border border-white/10 rounded-2xl p-6 backdrop-blur-xl"
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-accent/20 border border-accent/50 flex items-center justify-center">
                     <span className="text-accent text-xl">✓</span>
                   </div>
                   <div>
                     <p className="text-white font-semibold font-body">
                       Microsoft Certified
                     </p>
-                    <p className="text-gray-400 text-sm font-body">
-                      MCSA - HTML5/CSS3/JS
+                    <p className="text-gray-400 text-sm text-center font-body">
+                      (MCSA)
                     </p>
                   </div>
                 </div>

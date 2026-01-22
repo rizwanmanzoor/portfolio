@@ -13,7 +13,7 @@ const contactInfo = [
   {
     icon: Phone,
     label: 'Phone',
-    value: '+92 345 4455148',
+    value: '(+92) 345-4455148',
     href: 'tel:+923454455148'
   },
   {
@@ -121,7 +121,7 @@ export default function Hero() {
                       <div className="w-12 h-12 rounded-2xl bg-white/5 border border-accent/30 flex items-center justify-center group-hover:bg-accent/10 transition-all duration-300">
                         <item.icon className="w-5 h-5 text-gray-400 group-hover:text-accent transition-colors" />
                       </div>
-                      <div>
+                      <div title={item.label}>
                         <p
                           className="text-gray-500 group-hover:text-accent text-sm font-accent"
                         >
@@ -139,7 +139,7 @@ export default function Hero() {
                       <div className="w-12 h-12 rounded-2xl bg-white/5 border border-accent/30 flex items-center justify-center">
                         <item.icon className="w-5 h-5 text-gray-400" />
                       </div>
-                      <div>
+                      <div title={item.label}>
                         <p
                           className="text-gray-500 text-sm font-accent"
                         >
@@ -173,6 +173,7 @@ export default function Hero() {
                 {socialLinks.map((social) => (
                   <a
                     key={social.label}
+                    title={social.label}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"

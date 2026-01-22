@@ -116,6 +116,7 @@ export default function Header() {
           <a
             href="https://wa.me/923454455148"
             target="_blank"
+            title="Let's Talk on WhatsApp"
             className="group flex items-center gap-2 px-6 py-2.5 rounded-full font-body border border-accent/30 text-accent hover:bg-accent hover:text-primary transition-all duration-300"
           >
             <span className="text-sm font-medium">Let's Talk</span>
@@ -175,6 +176,7 @@ export default function Header() {
                   className="mt-8"
                 >
                   <a
+                    title="Let's Talk on Phone"
                     href="tel: +923454455148"
                     className="px-6 py-2.5 flex items-center gap-2 rounded-lg bg-accent hover:bg-[#8ae63f] text-black font-semibold text-lg transition-all duration-300"
                   >
@@ -197,6 +199,7 @@ export default function Header() {
                     {socialLinks.map((social) => (
                       <a
                         key={social.label}
+                        title={social.label}
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"

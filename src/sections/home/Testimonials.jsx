@@ -70,13 +70,13 @@ export default function Testimonials() {
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star
                         key={i}
-                        className="w-5 h-5 fill-accent text-accent"
+                        className="w-5 h-5 fill-accent/80 text-accent/20"
                       />
                     ))}
                   </div>
 
                   {/* Quote */}
-                  <p className="text-gray-300 text-lg leading-relaxed mb-8 font-body">
+                  <p className="text-gray-300 text-md leading-relaxed mb-8 font-body">
                     "{testimonial.quote}"
                   </p>
 

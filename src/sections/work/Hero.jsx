@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { AnimatedText, AnimatedLine } from "@/components/ui/AnimatedText";
 
-const industries = ['Real Estate', 'Healthcare', 'Finance', 'E-Commerce', 'SaaS'];
+const industries = ['Real Estate', 'Construction', 'Healthcare', 'Finance', 'Logistics', 'E-Commerce', 'SaaS'];
 
 export default function Hero() {
   return (
@@ -124,7 +124,7 @@ export default function Hero() {
                     </div>
                     <div className="space-y-2">
                       <span className="text-4xl font-bold text-white font-heading">
-                        5<sup>+</sup>
+                        6<sup>+</sup>
                       </span>
                       <p className="text-gray-400 text-sm font-body">
                         Industries Served
